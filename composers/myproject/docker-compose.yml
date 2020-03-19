@@ -1,0 +1,23 @@
+version: '3.5'
+services:
+  # ##################################################
+  # MyProject
+  # ##################################################
+  product_inventory-myproject:
+    build:
+      context: ../..
+      dockerfile: myproject/Dockerfile
+    working_dir: /app
+    image: product_inventory-myproject
+    container_name: product_inventory-myproject
+    entrypoint: bash /app/entrypoint.sh
+    ports:
+      - "0.0.0.0:6868:6868"
+    expose:
+      - "6868/tcp"
+    networks:
+      - product_inventory-network
+networks:
+  product_inventory-network:
+    name: product_inventory-network
+    driver: "bridge"

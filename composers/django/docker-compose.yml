@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  # ##################################################
+  # Django
+  # ##################################################
+  product_inventory-django:
+    build:
+      context: ../..
+      dockerfile: django/Dockerfile
+    working_dir: /app
+    image: product_inventory-django
+    container_name: product_inventory-django
