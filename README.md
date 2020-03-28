@@ -74,7 +74,3 @@ http://localhost:6868/myapp/retrieve_available
 Retrieve sold out:
 
 http://localhost:6868/myapp/retrieve_sold_out
-
-## Consideration
-
-Six hours were taken to implement this solution instead of three
